@@ -108,8 +108,8 @@
 <section class="service-area section-gap">			
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 pb-50 header-text text-center">
-                <h1 class="mb-10">Our Partner</h1>
+            <div class="col-md-12 header-text text-center">
+                <h1 class="mb-5">Our Partner</h1>
 <!--                <p>
                     Who are in extremely love with eco friendly system..
                 </p>-->
@@ -117,7 +117,7 @@
         </div>
     </div>	
 </section>
-<section class="brands-area pb-10">
+<section class="brands-area">
     <div class="container no-padding">
         <div class="brand-wrap">
             <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
@@ -143,7 +143,7 @@
 <section class="service-area section-gap">			
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 pb-50 header-text text-center">
+            <div class="col-md-12 header-text text-center">
                 <h1 class="mb-10">Our Customers</h1>
 <!--                <p>
                     Who are in extremely love with eco friendly system..
@@ -152,7 +152,7 @@
         </div>
     </div>	
 </section>
-<section class="brands-area pb-10">
+<section class="brands-area">
     <div class="container no-padding">
         <div class="brand-wrap">
             <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
