@@ -109,7 +109,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 header-text text-center">
-                <h1 class="mb-5">Our Partner</h1>
+                <h1 class="mb-5">We Do Integrate And Customize</h1>
 <!--                <p>
                     Who are in extremely love with eco friendly system..
                 </p>-->
@@ -121,6 +121,9 @@
     <div class="container no-padding">
         <div class="brand-wrap">
             <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l0.png" alt=""></a>
+                </div>
                 <div class="col single-brand">
                     <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
                 </div>
@@ -135,6 +138,12 @@
                 </div>
                 <div class="col single-brand">
                     <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
+                </div>
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l6.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l7.png" alt=""></a>
                 </div>								
             </div>																			
         </div>
@@ -152,7 +161,7 @@
         </div>
     </div>	
 </section>
-<section class="brands-area">
+<section class="brands-area" style="display: none;">
     <div class="container no-padding">
         <div class="brand-wrap">
             <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
@@ -168,6 +177,9 @@
                 <div class="col single-brand">
                     <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
                 </div>
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l6.png" alt=""></a>
+                </div>								
                 <div class="col single-brand">
                     <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
                 </div>								
