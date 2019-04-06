@@ -105,7 +105,7 @@
         </div>
     </div>	
 </section>
-<section class="service-area section-gap">			
+<section class="service-area">			
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 header-text text-center">
