@@ -98,9 +98,7 @@
                 <h1>
                     Our Vision
                 </h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo metus, vehicula sit amet mauris sed, porta blandit mi. Duis sit amet dictum neque, eget fringilla elit. Sed mollis sapien dolor, a feugiat quam eleifend nec. Morbi ornare, est eget eleifend elementum, quam urna aliquet nulla, a aliquet velit felis vitae velit. Fusce fermentum accumsan ante, et vestibulum arcu molestie a. Phasellus vitae nulla et justo placerat porttitor. Donec egestas finibus facilisis. Pellentesque eget ex sit amet magna volutpat convallis. Donec faucibus magna dui, id dignissim massa fringilla tempus. Etiam ut condimentum diam. Praesent auctor tempor sapien aliquam eleifend. Praesent sit amet risus quis velit scelerisque fringilla in ac sem. In dignissim lacus quis semper tempor. Mauris laoreet gravida neque, et tincidunt ligula tincidunt ac. Aenean rhoncus mollis nunc finibus convallis. Ut elementum lectus in vehicula dignissim.
-                </p>
+                <p style="min-height: 300px;"></p>
             </div>
         </div>
     </div>	
@@ -145,6 +143,36 @@
                 <div class="col single-brand">
                     <a href="#"><img class="mx-auto" src="img/l7.png" alt=""></a>
                 </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l8.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/l9.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/20.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/21.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/22.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/23.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/24.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/25.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/26.png" alt=""></a>
+                </div>								
+                <div class="col single-brand">
+                    <a href="#"><img class="mx-auto" src="img/27.png" alt=""></a>
+                </div>								
             </div>																			
         </div>
     </div>	
@@ -158,32 +186,6 @@
                     Who are in extremely love with eco friendly system..
                 </p>-->
             </div>
-        </div>
-    </div>	
-</section>
-<section class="brands-area" style="display: none;">
-    <div class="container no-padding">
-        <div class="brand-wrap">
-            <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
-                <div class="col single-brand">
-                    <a href="#"><img class="mx-auto" src="img/l1.png" alt=""></a>
-                </div>
-                <div class="col single-brand">
-                    <a href="#"><img class="mx-auto" src="img/l2.png" alt=""></a>
-                </div>
-                <div class="col single-brand">
-                    <a href="#"><img class="mx-auto" src="img/l3.png" alt=""></a>
-                </div>
-                <div class="col single-brand">
-                    <a href="#"><img class="mx-auto" src="img/l4.png" alt=""></a>
-                </div>
-                <div class="col single-brand">
-                    <a href="#"><img class="mx-auto" src="img/l6.png" alt=""></a>
-                </div>								
-                <div class="col single-brand">
-                    <a href="#"><img class="mx-auto" src="img/l5.png" alt=""></a>
-                </div>								
-            </div>																			
         </div>
     </div>	
 </section>
