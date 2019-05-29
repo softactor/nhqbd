@@ -3,7 +3,7 @@
 <section class="contact-page-area section-gap">
     <div class="container">
         <div class="row">
-            <!--<div class="map-wrap" style="width:100%; height: 445px;" id="map_" style="display: none;"></div>-->
+            <div class="map-wrap" style="width:100%; height: 15px;" id="map_" style="display: none;"></div>
             <div class="col-lg-4 d-flex flex-column address-wrap">
                 <div class="single-contact-address d-flex flex-row">
                     <div class="icon">
