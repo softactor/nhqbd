@@ -121,7 +121,7 @@
         'list' => [
             [
                 'title' => 'IDLC Finance Ltd',
-                'logo' => 'images/logos/IDLC_Log.png',
+                'logo' => 'images/logos/IDLC.png',
             ],
             [
                 'title' => 'Industrial Promotion and Development Company of Bangladesh Limited',
@@ -356,7 +356,7 @@
                     ?>
                     <h3><?php echo $clint['title']; ?></h3>
                     <div class="flexslider carousel">
-                        <ul class="slides">
+                        <ul class="slides client_slides">
                             <?php
                                 if(isset($clint['list']) && !empty($clint['list'])){
                                     foreach($clint['list'] as $clintList){

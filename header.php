@@ -30,8 +30,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/default.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/site_style.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/site_style.css" type="text/css" media="screen" />
     </head>
     <body>	
         <header id="header" id="home">
