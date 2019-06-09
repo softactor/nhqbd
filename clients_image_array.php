@@ -218,7 +218,7 @@
             ],
             [
                 'title' => 'IDLC SECURITIES LIMITED',
-                'logo' => 'images/logos/idlc.png',
+                'logo' => 'images/logos/IDLC.png',
             ],
         ],
     ],
