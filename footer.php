@@ -80,6 +80,8 @@
 <script src="js/main.js"></script>
 <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
 <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/jssor.slider-27.5.0.min.js"></script>
+<script type="text/javascript" src="js/jssor_slider_conf.js"></script>
 <script type="text/javascript">
     $(window).load(function() {
         $('#slider').nivoSlider();
@@ -97,5 +99,6 @@
       });
     });
 </script>
+<script type="text/javascript">jssor_1_slider_init();</script>
 </body>
 </html>

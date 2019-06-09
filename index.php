@@ -181,13 +181,20 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12 header-text text-center">
-                <h1 class="mb-10">Our Customers</h1>
-<!--                <p>
-                    Who are in extremely love with eco friendly system..
-                </p>-->
+                <h1 class="mb-10">Our Customer</h1>
+            </div>
+            
+        </div>
+    </div>
+    
+    <section class="brands-area">
+        <div class="container no-padding">
+            <div class="brand-wrap">
+                <?php include('client_slider_jsor.php'); ?>
             </div>
         </div>
-    </div>	
+    </section>
+    
 </section>
 <!-- End home-about Area -->
 <?php include('footer.php'); ?>
