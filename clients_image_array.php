@@ -43,75 +43,7 @@
             [
                 'title' => 'One Bank Ltd',
                 'logo' => 'images/logos/Onebank.png',
-            ],
-//            [
-//                'title' => 'Bangladesh Somobay bank Limited.',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'United Commercial Bank Limited.',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'IFIC Bank Limited.',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'ICB Islamic Bank Limited.',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Southeast Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Union Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'The City Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'NCC Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Eastern Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'First Security Islami Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'The Premier bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'AB Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Shimanto Bank limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Bangladesh Development Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Brac Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Trust Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
-//            [
-//                'title' => 'Mutual Trust Bank Limited',
-//                'logo' => 'images/logos/bangladesh-bank.png',
-//            ],
+            ]
         ]
     ],
     [

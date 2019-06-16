@@ -1,5 +1,6 @@
-<?php include('clients_image_array.php'); ?>
 <?php
+    $table      =    'post_category where post_type_id = 2 ';
+    $clients    =   getTableDataByTableName($table);
     if(isset($clients) && !empty($clients)){
 ?>
 <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:150px;overflow:hidden;visibility:hidden;">
@@ -10,11 +11,13 @@
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:150px;overflow:hidden;">
             <?php
                 foreach($clients as $clint){
-                    if(isset($clint['list']) && !empty($clint['list'])){
-                                    foreach($clint['list'] as $clintList){
+                    $table =    'post_details WHERE post_type = 2 AND post_cat='.$clint['id'];
+                    $clientList   =   getTableDataByTableName($table);
+                    if (isset($clientList) && !empty($clientList)) {
+                                    foreach($clientList as $list){
             ?>
             <div>
-                <img data-u="image" src="<?php echo $clintList['logo']; ?>" title="<?php echo $clintList['title']; ?>" alt="<?php echo $clintList['title']; ?>"/>
+                <img data-u="image" src="<?php echo $list['post_logo']; ?>" title="<?php echo $list['name']; ?>" alt="<?php echo $list['name']; ?>"/>
             </div>
                 <?php }}} ?>
         </div>

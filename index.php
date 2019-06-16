@@ -1,50 +1,5 @@
 <?php include('header.php'); ?>
 <?php include('slider.php'); ?>
-<?php
-    $services = [
-        [
-            'thumb' => 'img/services/service_01.jpg',
-            'title' => 'End Point Security',
-            'list'  => [
-                'Next Gen AV',
-                 'Active Response',
-                 'EDR',
-                 'DAC(ai)',
-            ]
-        ],
-        [
-            'thumb' => 'img/services/service_02.jpg',
-            'title' => 'Network Security',
-            'list'  => [
-                 'IPS',
-                 'IDS',
-                 'Network DLP',
-                 'DAC(ai)',
-            ],
-        ],
-        [
-            'thumb' => 'img/services/service_03.jpg',
-            'title' => 'Gateway Security',
-            'list'  => [
-                 'Web Security',
-                 'Email Security',
-                 'NAC',
-                 'Authentication(2FA, Multifactor)',
-            ],
-        ],
-        [
-            'thumb' => 'img/services/service_04.jpg',
-            'title' => 'Datacenter Security',
-            'list'  => [
-                 'Server security',
-                 'Database Activity Monitoring',
-                 'File Integrity Monitoring',
-                 'Email Archiving',
-            ],
-        ]
-    ];
-?>
-
 <!-- Start service Area -->
 <section class="service-area section-gap" id="service">
     <div class="container">
@@ -58,22 +13,26 @@
         </div>						
         <div class="row">
             <?php
+            $table =    'post_category where post_type_id = 1 ';
+            $services   =   getTableDataByTableName($table);
             if (isset($services) && !empty($services)) {
                 foreach ($services as $serviceData) {
                     ?>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-service">
                             <div class="thumb">
-                                <img src="<?php echo $serviceData['thumb']; ?>" alt="">									
+                                <img src="img/services/<?php echo $serviceData['logo']; ?>" alt="<?php echo $serviceData['name']; ?>">									
                             </div>
-                            <h4><?php echo $serviceData['title'] ?></h4>
+                            <h4><?php echo $serviceData['name'] ?></h4>
                             <div class="imglist">
                                 <ul>
                                     <?php
-                                    if (isset($serviceData['list']) && !empty($serviceData['list'])) {
-                                        foreach ($serviceData['list'] as $serviceDataList) {
+                                    $table =    'post_details WHERE post_type = 1 AND post_cat='.$serviceData['id'];
+                                    $servicesList   =   getTableDataByTableName($table);
+                                    if (isset($servicesList) && !empty($servicesList)) {
+                                        foreach ($servicesList as $list) {
                                             ?>
-                                    <li><a href="service_details.php"><span><?php echo $serviceDataList; ?></span></a></li>
+                                    <li><a href="service_details.php"><span><?php echo $list['name']; ?></span></a></li>
                                         <?php }
                                     }
                                     ?>

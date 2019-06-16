@@ -1,3 +1,7 @@
+<?php
+include 'connection/conn.php';
+include 'helper/utilities.php';
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
     <head>
@@ -5,8 +9,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Favicon-->
         <link rel="shortcut icon" href="img/favicon.png">
-        <!-- Author Meta -->
-        <meta name="author" content="colorlib">
         <!-- Meta Description -->
         <meta name="description" content="">
         <!-- Meta Keyword -->
