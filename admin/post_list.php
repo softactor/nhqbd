@@ -19,41 +19,51 @@
                     <i class="fas fa-table"></i> Post List
                 </div>
                 <div class="card-body">
-                    <form action="" method="post" enctype="multipart/form-data">
-                    <div class="table-responsive">          
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="sel1">Post Type:</label>                            
-                                            <select class="form-control" id="post_type" name="post_type" onchange="getPostCatByPosttype(this.value)">
-                                                <option value="">Please Select</option>
-                                                <?php
-                                                if (isset($post_types) && !empty($post_types)) {
-                                                    foreach ($post_types as $ptype) {
-                                                        ?>     
-                                                        <option value="<?php echo $ptype['id']; ?>"><?php echo $ptype['name']; ?></option>
-                                                    <?php }
-                                                } ?>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for="sel1">Post Categories:</label>
-                                            <select class="form-control" id="post_cat" name="post_cat">
-                                                <option value="">Please Select</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <form action="" method="post" id="post_data_search_form">
+                        <div class="table-responsive">          
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="sel1">Post Type:</label>                            
+                                                <select class="form-control" id="post_type" name="post_type" onchange="getPostCatByPosttype(this.value)">
+                                                    <option value="">Please Select</option>
+                                                    <?php
+                                                    if (isset($post_types) && !empty($post_types)) {
+                                                        foreach ($post_types as $ptype) {
+                                                            ?>     
+                                                            <option value="<?php echo $ptype['id']; ?>"><?php echo $ptype['name']; ?></option>
+                                                        <?php }
+                                                    }
+                                                    ?>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="sel1">Post Categories:</label>
+                                                <select class="form-control" id="post_cat" name="post_cat">
+                                                    <option value="">Please Select</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="pull-right">
+                                            <button type="button" class="btn btn-primary" onclick="getPostDataSearchForm('post_data_search_form');">
+                                                <span class="fa fa-search" aria-hidden="true"></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </form>
                 </div>
-
+                <div class="card-body">
+                    <span id="search_data_response_section"></span>
+                </div>
             </div>
             </div>
         </div>
