@@ -29,3 +29,16 @@ function getPostDataSearchForm(formId){
         });
     }
 }
+
+function openPostDetailsEditForm(editId){
+    $.ajax({
+            url         : base_url_addr + "admin/partial/open_post_details_edit_form.php",
+            type        : "POST",
+            dataType    : "html",
+            data        : 'editId='+editId,
+            success     : function (response) {
+                $('#post_details_edit_modal').modal('show');
+                $('#post_details_edit_body').html(response);
+            }
+        });
+}

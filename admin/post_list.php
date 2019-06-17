@@ -80,3 +80,6 @@
 </div>
 <!-- /.content-wrapper -->
 <?php include 'footer.php'; ?>
+ <!--Post details edit modal-->
+ 
+<?php include 'modal/post_details_edit_modal.php'; ?>

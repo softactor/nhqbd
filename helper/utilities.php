@@ -49,3 +49,13 @@ function getNameByIdAndTable($table){
     }
     return $name;
 }
+
+function getDataRowIdAndTable($table){
+    global $conn;
+    $sql = "SELECT * FROM $table";
+    $result = $conn->query($sql);
+    $name   =   '';
+    if ($result->num_rows > 0) {
+        return $result->fetch_object();
+    }
+}
