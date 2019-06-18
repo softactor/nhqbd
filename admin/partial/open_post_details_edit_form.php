@@ -9,7 +9,7 @@ if(isset($_POST['editId']) && !empty($_POST['editId'])){
     $post_details   =   getDataRowIdAndTable($table);
     if(isset($post_details) && !empty($post_details)){
     ?>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data" id="post_details_update_form">
             <div class="form-group">
                 <label for="sel1">Post Type:</label>                            
                 <select class="form-control" id="post_type" name="post_type">
@@ -49,10 +49,16 @@ if(isset($_POST['editId']) && !empty($_POST['editId'])){
                 <textarea class="form-control" rows="5" id="post_details" name="post_details"><?php if(isset($post_details->post_details) && !empty($post_details->post_details)){ echo $post_details->post_details; } ?></textarea>
             </div>
             <div class="form-group">
-                <label for="usr">Details:</label>
+                <label for="usr">Image:</label>
+                <?php
+                    if(isset($post_details->post_logo) && !empty($post_details->post_logo)) {
+                ?>
+                <img src="../<?php echo $post_details->post_logo; ?>" />
+                <?php } ?>
                 <input type="file" class="form-control" id="post_logo" name="post_logo">
             </div>
-            <input type="submit" name="post_entry_submit" class="btn btn-default" />
+            <button type="button" class="btn btn-default" onclick="processPostDetailsUpdateForm();">Update</button
+        >
         </form>
     
     <?php
@@ -60,3 +66,15 @@ if(isset($_POST['editId']) && !empty($_POST['editId'])){
     } 
         
 } ?>
+
+<?php
+    if(isset($_GET['process']) && !empty($_GET['process'])){
+        print '<pre>';
+        print_r($_POST);
+        print_r($_FILES);
+        print '</pre>';
+        exit;
+        
+    }
+?>
+

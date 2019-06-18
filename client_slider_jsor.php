@@ -17,7 +17,16 @@
                                     foreach($clientList as $list){
             ?>
             <div>
-                <img data-u="image" src="<?php echo $list['post_logo']; ?>" title="<?php echo $list['name']; ?>" alt="<?php echo $list['name']; ?>"/>
+                <?php
+                    if(isset($list['post_link']) && !empty($list['post_link'])){
+                        $postLink   =   $list['post_link'];
+                ?>
+                <a href='<?php echo $postLink; ?>' target="_blank">
+                    <img data-u="image" src="<?php echo $list['post_logo']; ?>" title="<?php echo $list['name']; ?>" alt="<?php echo $list['name']; ?>"/>
+                </a>
+                <?php     }else{ ?>
+                    <img data-u="image" src="<?php echo $list['post_logo']; ?>" title="<?php echo $list['name']; ?>" alt="<?php echo $list['name']; ?>"/>                    
+                <?php } ?>
             </div>
                 <?php }}} ?>
         </div>

@@ -42,17 +42,25 @@ if(isset($_POST['post_type']) && !empty($_POST['post_type'])){
                             </td>
                             <td><?php echo $cat['name']; ?></td>
                             <td><?php echo $cat['post_link']; ?></td>
-                            <td><?php echo $cat['post_logo']; ?></td>
+                            <td>
+                                <?php
+                                    if(isset($cat['post_logo']) && !empty($cat['post_logo'])) {
+                                ?>
+                                <img src="../<?php echo $cat['post_logo']; ?>" width="100" />
+                                <?php } ?>
+                            </td>
                             <td>
                                 <?php
                                 $edit_id    =   $cat['id'];
                                 ?>
-                                <button type="button" class="btn btn-primary" onclick="openPostDetailsEditForm('<?php echo $edit_id; ?>')">
+<!--                                <button type="button" class="btn btn-primary" onclick="openPostDetailsEditForm('<?php echo $edit_id; ?>')">
                                     Edit
                                 </button>
                                 <button type="button" class="btn btn-danger" onclick="openPostDetailsDeleteConfirm()">
                                     Delete
-                                </button>
+                                </button>-->
+                                <a href="post_details_edit.php?edit_id=<?php echo $edit_id; ?>" class="btn btn-primary">Edit</a>
+                                <a href="post_details_edit.php" class="btn btn-primary">Delete</a>
                             </td>
                         </tr>
                         <?php } ?>

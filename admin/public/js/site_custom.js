@@ -42,3 +42,15 @@ function openPostDetailsEditForm(editId){
             }
         });
 }
+function processPostDetailsUpdateForm(editId){
+    $.ajax({
+            url         : base_url_addr + "admin/partial/open_post_details_edit_form.php?process=update",
+            type        : "POST",
+            dataType    : "html",
+            data        : $('#post_details_update_form').serialize(),
+            success     : function (response) {
+                $('#post_details_edit_modal').modal('show');
+                $('#post_details_edit_body').html(response);
+            }
+        });
+}
