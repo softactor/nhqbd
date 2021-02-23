@@ -1,12 +1,13 @@
-<?php include 'header.php';
-    if(isset($_POST['post_details_update']) && !empty($_POST['post_details_update'])){
-        $edit_id        = $_POST['edit_id'];
-        $name           = $_POST['name'];
-        $post_type      = $_POST['post_type'];
-        $post_cat       = $_POST['post_cat'];
-        $post_link      = $_POST['post_link'];
-        $post_details   = $_POST['post_details'];
-        $post_logo      = $_POST['previous_post_logo'];
+<?php
+include 'header.php';
+if(isset($_POST['post_details_update']) && !empty($_POST['post_details_update'])){
+        $edit_id        = check_input_data($_POST['edit_id']);
+        $name           = check_input_data($_POST['name']);
+        $post_type      = check_input_data($_POST['post_type']);
+        $post_cat       = check_input_data($_POST['post_cat']);
+        $post_link      = check_input_data($_POST['post_link']);
+        $post_details   = check_input_data($_POST['post_details']);
+        $post_logo      = check_input_data($_POST['previous_post_logo']);
         if (isset($_FILES['post_logo']['name']) && $_FILES['post_logo']['size'] > 0) {
             $image_name         = $_FILES['post_logo']['name'];
             $temp               = explode(".", $image_name);
@@ -20,30 +21,28 @@
             header("Location: post_details_edit.php?edit_id=$edit_id");
         }
     }
-    if(isset($_GET['edit_id']) && !empty($_GET['edit_id'])){
-        $edit_id                =   $_GET['edit_id'];
-        $table                  =   'post_details where id ='.$edit_id.' ';
-        $post_details           =   getDataRowIdAndTable($table);
-        $post_types             =   getTableDataByTableName('post_type');
-        $post_categories        =   getTableDataByTableName('post_category');
+    $edit_id                =   $_GET['edit_id'];
+    $table                  =   'post_details where id ='.$edit_id.' ';
+    $post_details           =   getDataRowIdAndTable($table);
+    $post_types             =   getTableDataByTableName('post_type');
+    $post_categories        =   getTableDataByTableName('post_category');
 ?>
-<div id="content-wrapper">
-    <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Create Post</a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-        </ol>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                    <div class="card-header">
-                        <i class="fas fa-table"></i> Post Entry
+<?php include 'top_sidebar.php'; ?>
+<!-- Left side column. contains the logo and sidebar -->
+<?php include 'left_sidebar.php'; ?>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Create Post</h3>
                     </div>
-                    <div class="card-body">
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                    <div class="box-body">
                         <form action="" method="post" enctype="multipart/form-data" id="post_details_update_form">
                             <div class="form-group">
                                 <label for="sel1">Post Type:</label>                            
@@ -53,9 +52,9 @@
                                     if (isset($post_types) && !empty($post_types)) {
                                         foreach ($post_types as $ptype) {
                                             ?>     
-                                            <option value="<?php echo $ptype['id']; ?>" <?php if (isset($post_details->post_type) && $post_details->post_type == $ptype['id']) {
+                                            <option value="<?php echo $ptype->id; ?>" <?php if (isset($post_details->post_type) && $post_details->post_type == $ptype->id) {
                                     echo 'selected';
-                                } ?>><?php echo $ptype['name']; ?></option>
+                                } ?>><?php echo $ptype->name; ?></option>
         <?php }
     }
     ?>
@@ -69,9 +68,9 @@
                                     if (isset($post_categories) && !empty($post_categories)) {
                                         foreach ($post_categories as $pcat) {
                                             ?>     
-                                            <option value="<?php echo $pcat['id']; ?>"<?php if (isset($post_details->post_cat) && $post_details->post_cat == $pcat['id']) {
+                                            <option value="<?php echo $pcat->id; ?>"<?php if (isset($post_details->post_cat) && $post_details->post_cat == $pcat->id) {
                                     echo 'selected';
-                                } ?>><?php echo $pcat['name']; ?></option>
+                                } ?>><?php echo $pcat->name; ?></option>
         <?php }
     }
     ?>
@@ -110,18 +109,12 @@
                         </form>
                     </div>
                 </div>
-        </div>
-    </div>
-    <!-- /.container-fluid -->
-    <!-- Sticky Footer -->
-    <footer class="sticky-footer">
-        <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-                <span>Copyright © Your Website 2019</span>
+                <!-- /.box -->
             </div>
+            <!-- /.col -->
         </div>
-    </footer>
+    </section>
+    <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
 <?php include 'footer.php'; ?>
-<?php } ?>

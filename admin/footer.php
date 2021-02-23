@@ -1,49 +1,80 @@
+  <footer class="main-footer">
+    <strong>Copyright &copy; <?php echo date("Y"); ?> <a href="http://saifpowertecltd.com/">Saif Powertec LTD/</a>.</strong> All rights
+    reserved.
+  </footer>
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
 </div>
-  <!-- /#wrapper -->
+<!-- ./wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="public/vendor/jquery/jquery.min.js"></script>
-  <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="public/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="public/vendor/chart.js/Chart.min.js"></script>
-  <script src="public/vendor/datatables/jquery.dataTables.js"></script>
-  <script src="public/vendor/datatables/dataTables.bootstrap4.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="public/js/sb-admin.min.js"></script>
-  <script src="public/js/global_url.js"></script>
-  <script src="public/js/site_custom.js"></script>
-
-  <!-- Demo scripts for this page-->
-
+<script src="js/global_url.js"></script>
+<!-- jQuery 3 -->
+<script src="vendor/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="vendor/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- DataTables -->
+<script src="vendor/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="vendor/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="vendor/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="vendor/dist/js/adminlte.min.js"></script>
+<script src="js/site_custom.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script>
+  $(function () {
+    $('#post_list_data_table').DataTable();
+    $('#employee_list').DataTable();
+    $('#product_list').DataTable();
+    $('#role_list').DataTable();
+    $('#user_list').DataTable();
+    $('#vendor_list').DataTable();
+  })
+  
+  function postDetailsDeleteConfirm(delete_id){
+    swal({
+        title               : 'Confirmed?',
+        text                : "You will not be able to recover the data again!",
+        type                : "warning",
+        showCancelButton    : true,
+        confirmButtonClass  : "btn-danger",
+        confirmButtonText   : "Confirm",
+        cancelButtonText    : 'Cancel',
+        closeOnConfirm      : false,
+        showLoaderOnConfirm : true
+    },
+    function () {
+        setTimeout(function () {
+            $.ajax({
+                url         : base_url_addr + 'admin/function/delete_process.php?process_type=post_delete',
+                type        : 'POST',
+                dataType    : 'json',
+                data        : 'delete_id='+delete_id,
+                success: function (response) {
+                    if(response.status == 'success'){
+                        $("#row_id_"+delete_id).hide("slow");
+                        swal("Deleted", response.message, "success");
+                        setTimeout(function() {
+                            if(response.totalRow){
+                                swal.close();
+                            }else{
+                                location.reload();
+                            }
+                        }, 1000);
+                    }else{
+                        swal("Failed!", response.message, "error");
+                    }
+                },
+                async: false // <- this turns it into synchronous
+            });
+        }, 2000);
+    });
+}
+  
+</script>
 </body>
-
 </html>

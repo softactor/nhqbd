@@ -1,33 +1,44 @@
-<?php  
-include '../connection/conn.php';
-include '../helper/utilities.php';
-       
-    $base_url   =   "http://dev.local/nhq1/admin/";
+<?php session_start(); 
+if(!isset($_SESSION['logged']['status'])){
+    header("location: index.php");
+    exit();
+}
+include 'connection/connect.php';
+include 'helper/utilities.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="../img/favicon.png">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title>NHQBD | Admin Panel</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon/favicon.png" />
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="vendor/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="vendor/bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="vendor/bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <!-- DataTables -->
+  <link rel="stylesheet" href="vendor/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="vendor/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="css/sweetalert.css">
 
-  <title>NHQ Admin - Dashboard</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-  <!-- Custom fonts for this template-->
-  <link href="public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  <!-- Page level plugin CSS-->
-  <link href="public/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="public/css/sb-admin.min.css" rel="stylesheet">
-  <link href="public/css/admin_site_style.css" rel="stylesheet">
+  <!-- Google Font -->
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">-->
 </head>
-<body id="page-top">
-  <?php include 'top_menu.php'; ?>
-  <div id="wrapper">
-    <!-- Sidebar -->
-    <?php include 'left_menu.php';?>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">

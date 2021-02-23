@@ -1,3 +1,8 @@
+<!-- DataTables -->
+  <link rel="stylesheet" href="vendor/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <!-- DataTables -->
+<script src="vendor/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="vendor/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <?php
 include '../../connection/conn.php';
 include '../../helper/utilities.php';
@@ -9,7 +14,7 @@ if(isset($_POST['post_type']) && !empty($_POST['post_type'])){
     if(isset($post_details) && !empty($post_details)){
     ?>
             <div class="table-responsive">          
-                <table class="table">
+                <table class="table table-bordered table-striped" id="post_list_data_table">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -25,8 +30,9 @@ if(isset($_POST['post_type']) && !empty($_POST['post_type'])){
                         <?php
                             $sl     =   1;
                             foreach($post_details as $cat){
+                                $edit_id    =   $cat['id'];
                         ?>
-                        <tr>
+                        <tr id="row_id_<?php echo $edit_id; ?>">
                             <td><?php echo $sl++; ?></td>
                             <td>
                                 <?php
@@ -50,17 +56,10 @@ if(isset($_POST['post_type']) && !empty($_POST['post_type'])){
                                 <?php } ?>
                             </td>
                             <td>
-                                <?php
-                                $edit_id    =   $cat['id'];
-                                ?>
-<!--                                <button type="button" class="btn btn-primary" onclick="openPostDetailsEditForm('<?php echo $edit_id; ?>')">
-                                    Edit
-                                </button>
-                                <button type="button" class="btn btn-danger" onclick="openPostDetailsDeleteConfirm()">
-                                    Delete
-                                </button>-->
                                 <a href="post_details_edit.php?edit_id=<?php echo $edit_id; ?>" class="btn btn-primary">Edit</a>
-                                <a href="post_details_edit.php" class="btn btn-primary">Delete</a>
+                                <button type="button" class="btn btn-danger" onclick="postDetailsDeleteConfirm('<?php echo $edit_id; ?>')">
+                                    Delete
+                                </button>
                             </td>
                         </tr>
                         <?php } ?>
@@ -73,3 +72,8 @@ if(isset($_POST['post_type']) && !empty($_POST['post_type'])){
     } 
         
 } ?>
+<script>
+  $(function () {
+    $('#post_list_data_table').DataTable();
+  })
+</script>
